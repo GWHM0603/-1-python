@@ -13,6 +13,10 @@ else:
 
 name = input("이름 입력: ").strip()
 if len(name):
-    print(name)
+    name = name.replace(" ", "")
+    if name.isalpha():
+        print(name)
+    else:
+        print("올바른 입력이 아닙니다.")    
 else:
     print("올바른 입력이 아닙니다.")
