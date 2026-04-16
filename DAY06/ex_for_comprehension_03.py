@@ -26,12 +26,26 @@ print(new_dict, "\n")
 new_dict = {key: "합격" if org_dict[key] >= 80 else "불합격" for key in org_dict}
 print(new_dict, "\n") 
 
-new_dict = {k: "합격" if v >= 80 else "불합격" for k, v in org_dict.items()}
+new_dict = {
+    k: "합격" if v >= 80 else
+    "불합격" 
+    
+    for k, v in org_dict.items()
+    
+}
 print(new_dict, "\n") 
 
 
 # >>> 점수에 따라 학점 A, B, C, D, F로 저장하는 Dict
-new_dict = {k: "A" if v >= 90 else "B" if v >= 80 else "C" if v >= 70 else "D" if v >= 60 else "F" for k, v in org_dict.items()}
+new_dict = {
+    k: "A" if v >= 90 else 
+    "B" if v >= 80 else 
+    "C" if v >= 70 else 
+    "D" if v >= 60 else 
+    "F" 
+            
+    for k, v in org_dict.items()
+}
 print(new_dict, "\n")
 
 
