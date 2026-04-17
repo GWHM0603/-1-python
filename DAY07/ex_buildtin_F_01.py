@@ -67,3 +67,15 @@ print("---- 10진수로 변환하기 ----")
 print(f"{b_num} -> 10진수 변환: {int(b_num, base = 2)}\n")
 print(f"{o_num} -> 10진수 변환: {int(o_num, base = 8)}\n")
 print(f"{h_num} -> 10진수 변환: {int(h_num, base = 16)}\n\n")
+
+
+# ----- ----- ----- ----- -----
+# >>> 문자열을 기계어로 변환 후 출력하기
+str = "Hello"
+new_str = ""
+
+for i in str:
+    new_str += bin(ord(i))[2:]
+    # new_str = bin(ord(i)).replace("0b","")
+    # new_str = bin(ord(i)).split("0b")[1]
+    print(new_str, end ="")
