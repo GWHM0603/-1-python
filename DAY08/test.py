@@ -32,42 +32,49 @@ def checknum(n):
 
 while True:
     num1 = input("첫 번째 숫자를 입력하세요: ").strip()
-    if num1:
-        if num1 == 'x' or num1 == 'X':
+
+    if not num1:
+        print("입력되지 않았습니다. 다시 입력하세요.")
+        continue
+
+    if num1.lower() == 'x':
             print("계산을 종료합니다.")
             break
-        else:
-            if num1.replace('.', '', 1).isdigit():
-                num2 = input("두 번째 숫자를 입력하세요: ").strip()
-                
-                if num2:
-                    if num2 == 'x' or num2 == 'X':
-                        print("계산을 종료합니다.")
-                        break
-                        
-                    else:
-                        if num2.replace('.', '', 1).isdigit():
-                            button = input("사칙 연산 기호를 입력하세요: ").strip()
-                                
-                            if button:
-                                if button == 'x' or button == 'X':
-                                    print("계산을 종료합니다.")
-                                    break
-                                else:
-                                    if button == '+' or button == '-' or button ==  '*' or button == '/':
-                                        num1 = checknum(num1)
-                                        num2 = checknum(num2)
-                                        result = calculator(num1, num2, button)
-                                        print(f"{num1} {button} {num2} = {result}")
-                                    else:
-                                        print("잘못된 기호를 입력했습니다. 다시 입력하세요.")
-                            else:
-                                print("입력되지 않았습니다. 다시 입력하세요.")
-                        else:
-                            print("숫자가 입력되지 않았습니다.")
-                else:
-                    print("입력되지 않았습니다. 다시 입력하세요.")
-            else:
-                print("숫자가 입력되지 않았습니다.")
-    else:
+    
+    if not num1.lstrip('-').replace('.', '', 1).isdigit():
+        print("숫자가 입력되지 않았습니다.")
+        continue
+
+    num2 = input("두 번째 숫자를 입력하세요: ").strip()
+    
+    if not num2:
         print("입력되지 않았습니다. 다시 입력하세요.")
+        continue
+
+    if num2.lower() == 'x':
+            print("계산을 종료합니다.")
+            break
+    
+    if not num2.lstrip('-').replace('.', '', 1).isdigit():
+        print("숫자가 입력되지 않았습니다.")
+        continue           
+                
+    button = input("사칙 연산 기호를 입력하세요: ").strip()
+    
+    if not button:
+        print("입력되지 않았습니다. 다시 입력하세요.")
+        continue
+
+    if button.lower() == 'x':
+            print("계산을 종료합니다.")
+            break
+    
+    if button not in ['+', '-', '*', '/']:
+        print("잘못된 기호를 입력했습니다. 다시 입력하세요.")
+        continue     
+
+    num1 = checknum(num1)
+    num2 = checknum(num2)
+    result = calculator(num1, num2, button)
+    print(f"{num1} {button} {num2} = {result}")       
+                
