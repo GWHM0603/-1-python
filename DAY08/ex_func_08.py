@@ -18,3 +18,15 @@ print(total(datas), sum(datas))
 # >>> 함수 이름에 새로운 데이터를 저장하면 그 함수는 사용불가함.
 # sum = 202  사용 불가함.
 # print(sum(datas))
+
+# >>> 같은 변수명의 지역변수와 전역변수
+
+num = 100
+
+def change(a, b, num):
+    num = num * (a + b) 
+    print(a, b, num)
+
+print(num)
+change(1, 2, 3)
+print(num)
