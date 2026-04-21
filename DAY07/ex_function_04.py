@@ -21,6 +21,9 @@ def get_grade(**score): # 딕셔너리로 받음
     
     return avg
 
-print(get_grade(), type(get_grade()), "\n")
-print(get_grade(kor=90, eng=87), "\n")
-print(get_grade(sci = 89, art = 80, dance = 77), "\n")
+# 해당 파일이 다른 파일에 import될 때는 아래 코드는 실행되지 않음.
+if __name__ == '__main__':
+    print(get_grade(), type(get_grade()), "\n")
+    print(get_grade(kor=90, eng=87), "\n")
+    print(get_grade(sci = 89, art = 80, dance = 77), "\n")
+    print(f"매직/스페셜 변수 __name__: {__name__}")
