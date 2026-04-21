@@ -9,12 +9,18 @@
 ## 전역 변수 설정
 file_path = './my_data.txt'
 
-## 파일 쓰기
+## 파일 쓰기 - 1: W모드
+## 존재하지 않는 파일이면 생성
+## 존재하는 파일이면 내용 지우고 쓰기
 ## 1) 열기 - open()
 f = open(file_path, mode = "wt", encoding = "utf8")
 
 ## 2) 쓰기
-wcnt = f.write("Good Luck 좋은 날")
+wcnt = f.write("Good Luck 좋은 날\n")
+# 몇 개 썻는지 반환
+print(wcnt, "\n")
+
+wcnt = f.write("12345678910")
 # 몇 개 썻는지 반환
 print(wcnt, "\n")
 
