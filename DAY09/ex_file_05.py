@@ -7,7 +7,7 @@
 ## 3) 파일 닫기
 ## ------------------------------------------------------------------
 ## 전역 변수 설정
-file_path = './my_data1.txt'
+file_path = './my_data2.txt'
 
 ## 파일 쓰기 - 1: x모드
 ## exist
@@ -26,3 +26,9 @@ print(wcnt, "\n")
 
 ## 3) 닫기
 f.close()
+
+
+## 파일들 속성 확인
+print(f"f.closed: {f.closed}")
+print(f"f.name: {f.name}")
+print(f"f.mode: {f.mode}")
