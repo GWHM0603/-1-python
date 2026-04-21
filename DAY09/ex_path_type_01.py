@@ -36,3 +36,11 @@ print(f"[2] 상대경로: {os.path.exists(file_path_re1)}\n")
 print(f"[3] 절대경로: {os.path.exists(file_path_abs2)}\n")
 print(f"[4] 상대경로: {os.path.exists(file_path_re2)}\n")
 
+
+## [실습] check.py 파일의 절대경로와 상대경로를 출력하기
+
+file_path_abs1 = R"C:\Users\KDT38\Desktop\KDT_14\[1]Python\DAY01\check.py"
+file_path_re1 = "../DAY01/check.py"
+
+print(f"[1] 절대경로: {os.path.exists(file_path_abs1)}\n")
+print(f"[2] 상대경로: {os.path.exists(file_path_re1)}\n")
