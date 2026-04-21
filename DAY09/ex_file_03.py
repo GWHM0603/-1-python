@@ -14,7 +14,7 @@ file_path = './my_data.txt'
 f = open(file_path, mode = "wt", encoding = "utf8")
 
 ## 2) 쓰기
-wcnt = f.write("Good Luck")
+wcnt = f.write("Good Luck 좋은 날")
 # 몇 개 썻는지 반환
 print(wcnt, "\n")
 
