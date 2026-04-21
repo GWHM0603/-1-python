@@ -10,3 +10,14 @@ print(m.pi)
 print(m.inf)
 print(m.factorial(5))
 print(m.pow(2, 3))
+
+
+# from 모듈명 import * 로 사용시 모듈 내 모든 것을 가지고 오고, 모듈명은 필요없음.
+# from math import pow as p
+# print(p(2,3))
+
+# pow이름으로 사용자 함수로 만들 경우 우선순위는 사용자 함수임.
+# 가능하면 함수명을 다르게 할 것
+
+# from math import *
+# print(pow(2,3))
